@@ -7,9 +7,8 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 // https://brainy-purse-boa.cyclic.app
 
 // MONGODB
-const uri = `${process.env.URI}`;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
+const client = new MongoClient(process.env.URI, {
     serverApi: {
         version: ServerApiVersion.v1,
         strict: true,
